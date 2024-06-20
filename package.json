@@ -2,7 +2,7 @@
   "name": "currency-converter-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://leszekm12.github.io/currency-converter-react/",
+  "homepage": "https://leszekm12.github.io/Currency-converter-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
