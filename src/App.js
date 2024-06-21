@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Container';
 import { currencies } from './currencies';
 import { Container } from './Container';
+import { Form } from './Form';
 
 function App() {
 
@@ -19,7 +20,9 @@ function App() {
       });
   }
   return (
-    <div>elo</div>
+    <Container>
+      <Form/>
+    </Container>
   );
 }
 
