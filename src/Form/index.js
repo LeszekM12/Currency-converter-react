@@ -1,6 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
+import { Result } from "./Result";
 
 export const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
@@ -9,14 +10,14 @@ export const Form = ({ calculateResult, result }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     calculateResult(currency, amount);
-  };
+  }
 
   return (
     <form className="form" onSubmit={onSubmit}>
-      <h1 className="form_header">Kalkulator walut</h1>
+      <h1 className="form__header">Kalkulator walut</h1>
       <p>
         <label>
-          <span className="form_labelText">Kwota PLN:</span>
+          <span className="form__labelText">Kwota PLN:</span>
           <input
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
@@ -31,9 +32,9 @@ export const Form = ({ calculateResult, result }) => {
       </p>
       <p>
         <label>
-          <span className="form_labelText">Waluta:</span>
+          <span className="form__labelText">Waluta:</span>
           <select
-            className="form_field"
+            className="form__field"
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -49,8 +50,10 @@ export const Form = ({ calculateResult, result }) => {
         </label>
       </p>
       <p>
-        <button className="form_buton">Przelicz!</button>
+        <button className="form__button">Przelicz!</button>
       </p>
+
+      <Result result={result}/>
     </form>
   );
 };

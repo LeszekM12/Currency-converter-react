@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Container';
 import { currencies } from './currencies';
 import { Container } from './Container';
 import { Form } from './Form';
@@ -21,7 +20,10 @@ function App() {
   }
   return (
     <Container>
-      <Form/>
+        <Form
+        result={result}
+        calculateResult={calculateResult}
+      />
     </Container>
   );
 }

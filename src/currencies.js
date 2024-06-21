@@ -12,7 +12,6 @@ export const currencies = [
     {
         short: "GBP",
         name: "Funt brytyjski",
-        rate: 5.1254,
-
+        rate: 5.1254
     },
 ];
