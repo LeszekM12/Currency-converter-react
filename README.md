@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Currecny Converter
+
+Currency converter app is created in react js, converts PLN to the other currencies costs. My project is based on the [YouCode](https://youcode.pl/frontend-developer/)
+
+[App](https://leszekm12.github.io/Currency-converter-react/)
+
+## technologies
+
++ `HTML5`
++ `CSS3`
+  + `BEM convention`
+  + `Flex-Box`
+  + `Grid`
+  + `Media Queries Level 4`
+  + `Normalize.css`
++ `Java Script ECMAScript 6`
++ `React.js`
++ `node.js`
++ `Create React App`
++ `npm`
++ `babel`
++ `localeStorage`
++ `styled components`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
