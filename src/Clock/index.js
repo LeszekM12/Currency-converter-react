@@ -12,4 +12,10 @@ export const Clock = () => {
             clearInterval(intervalId);
         };
     }, []); 
+
+    return (
+        <div>
+            {date.toLocaleString(undefined)}
+        </div>
+    )
 };
