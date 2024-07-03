@@ -13,14 +13,19 @@ Currency converter app is created in react js, converts PLN to the other currenc
   + `Grid`
   + `Media Queries Level 4`
   + `Normalize.css`
++ `Styled Components`
 + `Java Script ECMAScript 6`
 + `React.js`
++ `Hooks`
+  + `useEffect`
+  + `useState`
+  + `useRaf`
+  + `Custom Hooks`
 + `node.js`
 + `Create React App`
 + `npm`
 + `babel`
 + `localeStorage`
-+ `styled components`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
