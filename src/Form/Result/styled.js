@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledResult = styled.p`
-    color: teal;
+    color: ${({ theme }) => theme.color.white};
     text-align: center;
     font-size: 25px;
 
