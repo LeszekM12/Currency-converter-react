@@ -1,4 +1,4 @@
-import { StyledForm, Header, Input, Select, Label, Button } from "./styled";
+import { StyledForm, Header, Field, Label, Button } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -18,7 +18,7 @@ export const Form = ({ calculateResult, result }) => {
       <p>
         <label>
           <Label>Kwota PLN:</Label>
-          <Input
+          <Field
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
             placeholder="Wpisz kwotę PLN"
@@ -32,7 +32,8 @@ export const Form = ({ calculateResult, result }) => {
       <p>
         <label>
           <Label>Waluta:</Label>
-          <Select
+          <Field
+            as="select"
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -44,7 +45,7 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.name}
               </option>
             ))}
-          </Select>
+          </Field>
         </label>
       </p>
       <p>
