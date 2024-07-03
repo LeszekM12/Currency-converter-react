@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledForm, Header, Input, Select, Label, Button } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -13,15 +13,14 @@ export const Form = ({ calculateResult, result }) => {
   }
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <h1 className="form__header">Kalkulator walut</h1>
+    <StyledForm onSubmit={onSubmit}>
+      <Header>Kalkulator walut</Header>
       <p>
         <label>
-          <span className="form__labelText">Kwota PLN:</span>
-          <input
+          <Label>Kwota PLN:</Label>
+          <Input
             value={amount}
             onChange={({ target }) => setAmount(target.value)}
-            className="form__field"
             placeholder="Wpisz kwotę PLN"
             type="number"
             min="0.01"
@@ -32,9 +31,8 @@ export const Form = ({ calculateResult, result }) => {
       </p>
       <p>
         <label>
-          <span className="form__labelText">Waluta:</span>
-          <select
-            className="form__field"
+          <Label>Waluta:</Label>
+          <Select
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
@@ -46,14 +44,14 @@ export const Form = ({ calculateResult, result }) => {
                 {currency.name}
               </option>
             ))}
-          </select>
+          </Select>
         </label>
       </p>
       <p>
-        <button className="form__button">Przelicz!</button>
+        <Button>Przelicz!</Button>
       </p>
 
       <Result result={result}/>
-    </form>
+    </StyledForm>
   );
 };
