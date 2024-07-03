@@ -1,11 +1,12 @@
 import { useCurrentDate } from "./useCurrentDate";
+import { StyledClock } from "./styled";
 
 export const Clock = () => {
     const date = useCurrentDate();
 
     return (
-        <div>
+        <StyledClock>
             {date.toLocaleString(undefined)}
-        </div>
+        </StyledClock>
     )
 };
