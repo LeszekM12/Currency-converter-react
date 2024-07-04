@@ -2,18 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const useJsonData = () => {
-   const [ currencies, setCurrencies ] = useState(new Promise());
+   const [ currency, setCurrency ] = useState(new Promise());
     useEffect(async () => {
         try {
-            const currecnies = await axios.get("currencies.json");
-            setCurrencies(currecnies.data)
+            const currency = await axios.get("currencies.json");
+            setCurrency(currency.data)
         } catch (error) {
             console.error("Podłącz internet");
         }
     })();
 
-    axios.post('/From/index.js', {currencies})
-    .then(currencies => currencies.data)
+    axios.post('/currencies', {currency})
+    .then(currency => currency.data)
     .catch(error => error);
 };
 
