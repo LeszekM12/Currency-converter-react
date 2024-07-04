@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { currencies } from "./currencies";
 
-export const useJsonDate = () => {
+export const useJsonData = () => {
    const [ currencies, setCurrencies ] = useState(new Promise());
     useEffect(async () => {
         try {
@@ -13,7 +12,7 @@ export const useJsonDate = () => {
         }
     })();
 
-    axios.post('/currecies', {currencies})
+    axios.post('/From/index.js', {currencies})
     .then(currencies => currencies.data)
     .catch(error => error);
 };
