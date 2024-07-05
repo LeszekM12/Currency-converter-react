@@ -1,15 +1,14 @@
 import { StyledForm, Header, Field, Label, Button } from "./styled";
 import { useState } from "react";
-import { currencies } from "../currencies";
 import { Result } from "./Result";
+import { useJsonData } from "../useJsonData"; 
 
 export const Form = () => {
   const [result, setResult] = useState(null);
+  const ratesData = useJsonData();
 
   const calculateResult = (currency, amount) => {
-    const rate = currencies
-      .find(({ short }) => short === currency)
-      .rate;
+    const rate = ratesData.data[currency].value;
 
       setResult({
         sourceAmount: +amount,
@@ -17,7 +16,7 @@ export const Form = () => {
         currency,
       });
   }
-  const [currency, setCurrency] = useState(currencies[0].short);
+  const [currency, setCurrency] = useState("EUR");
   const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
@@ -50,12 +49,12 @@ export const Form = () => {
             value={currency}
             onChange={({ target }) => setCurrency(target.value)}
           >
-            {currencies.map((currency) => (
+            {Object.keys(ratesData.data || {}).map((currency) => (
               <option 
-                key={currency.short} 
-                value={currency.short}
+                key={currency} 
+                value={currency}
               >
-                {currency.name}
+                {currency}
               </option>
             ))}
           </Field>
