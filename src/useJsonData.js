@@ -2,19 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const useJsonData = () => {
-   const [ currency, setCurrency ] = useState(new Promise());
-    useEffect(async () => {
-        try {
-            const currency = await axios.get("currencies.json");
-            setCurrency(currency.data)
-        } catch (error) {
-            console.error("Podłącz internet");
-        }
-    })();
+   const [ ratesData, setRatesData ] = useState({status: "loading",});
 
-    axios.post('/currencies', {currency})
-    .then(currency => currency.data)
-    .catch(error => error);
+    useEffect(() => {
+        const axiosRates = async () => {
+            try {
+                const response = await axios.get("https://api.currencyapi.com/v3/latest?apikey=cur_live_ipczFcXW1F0EkRVxiXkN1rNTrts8OwZXz73t0MQx");
+                setRatesData(response.data)
+            } catch (error) {
+                setRatesData({satus: "error"})
+                console.error(error);
+            }
+        };
+        setTimeout(axiosRates, 3*1000);
+    }, []);
+    
+    return ratesData;
 };
 
 
