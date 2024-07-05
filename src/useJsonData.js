@@ -7,14 +7,14 @@ export const useJsonData = () => {
     useEffect(() => {
         const axiosRates = async () => {
             try {
-                const response = await axios.get("https://api.currencyapi.com/v3/latest?apikey=cur_live_ipczFcXW1F0EkRVxiXkN1rNTrts8OwZXz73t0MQx");
-                setRatesData(response.data)
+                const response = await axios.get("currencies.json");
+                setRatesData(response.data);
             } catch (error) {
-                setRatesData({satus: "error"})
+                setRatesData({satus: "error",})
                 console.error(error);
             }
         };
-        setTimeout(axiosRates, 3*1000);
+        setTimeout(axiosRates, 2*1000);
     }, []);
     
     return ratesData;
