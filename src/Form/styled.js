@@ -44,3 +44,8 @@ export const Button = styled.button`
         background-color: hsl(0, 0%, 17%);
     }
 `;
+
+export const ExchangeDate = styled.p`
+    text-align: center;
+    font-size: 15px;
+`;

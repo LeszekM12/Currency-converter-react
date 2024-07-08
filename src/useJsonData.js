@@ -8,7 +8,10 @@ export const useJsonData = () => {
         const axiosRates = async () => {
             try {
                 const response = await axios.get("currencies.json");
-                setRatesData(response.data);
+                setRatesData({ 
+                    data: response.data.data,
+                    date: response.data.meta.last_updated_at,
+                    status: "downloaded",});
             } catch (error) {
                 setRatesData({satus: "error",})
                 console.error(error);
