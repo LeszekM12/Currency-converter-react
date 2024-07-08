@@ -49,3 +49,8 @@ export const ExchangeDate = styled.p`
     text-align: center;
     font-size: 15px;
 `;
+
+export const ClockLoader = styled.p`
+    text-align: center;
+    color: red;
+`;
