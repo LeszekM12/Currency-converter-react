@@ -9,8 +9,8 @@ import {
 import { useState } from "react";
 import { Result } from "./Result";
 import { useJsonData } from "../useJsonData";
-import { PacmanLoader } from "react-spinners";
 import { Loading } from "./Loading";
+import { Error } from "./Error";
 
 
 export const Form = () => {
@@ -42,11 +42,7 @@ export const Form = () => {
     <StyledForm onSubmit={onSubmit}>
       <Header>Kalkulator walut</Header>
       {ratesData.status === "loading" ? <Loading/> :
-          ratesData.status === "error" ? <PacmanLoader
-          color="#ffffff"
-          margin={0}
-          size={50}
-        /> : (
+          ratesData.status === "error" ? <Error /> : (
         <>
           <p>
             <label>
