@@ -7,7 +7,7 @@ export const useJsonData = () => {
     useEffect(() => {
         const axiosRates = async () => {
             try {
-                const response = await axios.get("currencies.json");
+                const response = await axios.get("https://api.currencyapi.com/v3/latest?apikey=cur_live_ipczFcXW1F0EkRVxiXkN1rNTrts8OwZXz73t0MQx");
                 setRatesData({ 
                     data: response.data.data,
                     date: response.data.meta.last_updated_at,
