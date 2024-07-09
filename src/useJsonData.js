@@ -13,8 +13,10 @@ export const useJsonData = () => {
                     date: response.data.meta.last_updated_at,
                     status: "downloaded",});
             } catch (error) {
-                setRatesData({satus: "error",})
-                console.error(error);
+                setRatesData({
+                    status: "error",
+                    log: console.log(error),
+                })
             }
         };
         setTimeout(axiosRates, 2*1000);

@@ -9,7 +9,8 @@ import {
 import { useState } from "react";
 import { Result } from "./Result";
 import { useJsonData } from "../useJsonData";
-import { ClockLoader } from "react-spinners";
+import { ClockLoader, PacmanLoader } from "react-spinners";
+
 
 export const Form = () => {
   const [result, setResult] = useState(null);
@@ -40,11 +41,15 @@ export const Form = () => {
     <StyledForm onSubmit={onSubmit}>
       <Header>Kalkulator walut</Header>
       {ratesData.status === "loading" ? <ClockLoader
-      color="#ffffff"
-      size={100}
-      speedMultiplier={2}
-      /> :
-        ratesData.status === "error" ? <ClockLoader /> : (
+          color="#ffffff"
+          size={100}
+          speedMultiplier={2} 
+        /> :
+          ratesData.status === "error" ? <PacmanLoader
+          color="#ffffff"
+          margin={0}
+          size={50}
+        /> : (
         <>
           <p>
             <label>
