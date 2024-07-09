@@ -1,6 +1,6 @@
 # Currecny Converter
 
-Currency converter app is created in react js, converts PLN to the other currencies costs. My project is based on the [YouCode](https://youcode.pl/frontend-developer/)
+Currency converter app is created in react js, converts PLN to the more than 160 currencies costs. My project is based on the [YouCode](https://youcode.pl/frontend-developer/)
 
 [App](https://leszekm12.github.io/Currency-converter-react/)
 
