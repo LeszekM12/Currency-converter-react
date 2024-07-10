@@ -34,7 +34,7 @@ Currency converter app is created in react js, converts PLN to the more than 160
 + `JSX`
 + `Async/Await`
 + `Axios`
-+ `Error handling: try/cach`
++ `Error handling: try/catch`
 
 
   ![ezgif com-crop](https://github.com/LeszekM12/Currency-converter-react/assets/130221590/d1caa76c-475d-4d8c-9baf-5b712a4fba3b)
