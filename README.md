@@ -2,6 +2,9 @@
 
 Currency converter app is created in react js, converts PLN to the more than 160 currencies costs. My project is based on the [YouCode](https://youcode.pl/frontend-developer/)
 
+![ezgif com-cut](https://github.com/LeszekM12/Currency-converter-react/assets/130221590/c003993c-bf83-4f21-b0a1-6d99d7c47e8c)
+
+
 [App](https://leszekm12.github.io/Currency-converter-react/)
 
 ## technologies
@@ -32,6 +35,9 @@ Currency converter app is created in react js, converts PLN to the more than 160
 + `Async/Await`
 + `Axios`
 + `Error handling: try/cach`
+
+
+  ![ezgif com-crop](https://github.com/LeszekM12/Currency-converter-react/assets/130221590/d1caa76c-475d-4d8c-9baf-5b712a4fba3b)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
