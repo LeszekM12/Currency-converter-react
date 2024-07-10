@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export const useJsonData = () => {
+export const useRatesData = () => {
    const [ ratesData, setRatesData ] = useState({status: "loading",});
 
     useEffect(() => {

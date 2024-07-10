@@ -8,14 +8,14 @@ import {
 } from "./styled";
 import { useState } from "react";
 import { Result } from "./Result";
-import { useJsonData } from "../useJsonData";
+import { useRatesData } from "../useRatesData";
 import { Loading } from "./Loading";
 import { Error } from "./Error";
 
 
 export const Form = () => {
   const [result, setResult] = useState(null);
-  const ratesData = useJsonData();
+  const ratesData = useRatesData();
 
   const calculateResult = (currency, amount) => {
     const rate = ratesData.data[currency].value;
