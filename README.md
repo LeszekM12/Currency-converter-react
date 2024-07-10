@@ -8,7 +8,8 @@ Currency converter app is created in react js, converts PLN to the more than 160
 
 + `HTML5`
 + `CSS3`
-  + `BEM convention`
+  + `Animation`
+  + `Keyframes`
   + `Flex-Box`
   + `Grid`
   + `Media Queries Level 4`
@@ -23,9 +24,14 @@ Currency converter app is created in react js, converts PLN to the more than 160
   + `Custom Hooks`
 + `node.js`
 + `Create React App`
++ `Webpack`
 + `npm`
 + `babel`
 + `localeStorage`
++ `JSX`
++ `Async/Await`
++ `Axios`
++ `Error handling: try/cach`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
