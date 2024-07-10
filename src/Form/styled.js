@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form``;
 
-export const Header = styled.h1`
+export const Header = styled.header`
     text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    padding: 15px;
 `;
 
 export const Field = styled.input`
